@@ -42,7 +42,8 @@ public class BuscaIndiceOrdenado {
 				ft.seek(e2.getPosicao());
 				linha = ft.readLine();
 				colunas = linha.split("\t");
-				for(k = 0; k < colunas.length; k++) {
+				for(k = 0; k < colunas.length; k++) 
+				{
 					System.out.println(colunas[k]);
 				}
 				break;
