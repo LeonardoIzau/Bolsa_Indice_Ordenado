@@ -17,8 +17,8 @@ public class ElementoIndice {
 	}
 
 	void escreve(DataOutput out) throws IOException {
-    	out.writeUTF(this.nis);
-    	out.writeLong(this.posicao);
+    		out.writeUTF(this.nis);
+    		out.writeLong(this.posicao);
 	}
 	void le(DataInput in) throws IOException {
 		this.nis = in.readUTF();
