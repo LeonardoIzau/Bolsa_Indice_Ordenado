@@ -37,7 +37,8 @@ public class BuscaIndiceOrdenado {
 			e2.le(fi);
 			ComparaIndice c = new ComparaIndice();
 			comp = c.compare(e1, e2);
-			if(comp == 0) {
+			if(comp == 0) 
+			{
 				ft.seek(e2.getPosicao());
 				linha = ft.readLine();
 				colunas = linha.split("\t");
@@ -46,7 +47,8 @@ public class BuscaIndiceOrdenado {
 				}
 				break;
 			}
-			else {
+			else 
+			{
 				if (comp > 0)
 					inicio = meio + 1;
 				else
