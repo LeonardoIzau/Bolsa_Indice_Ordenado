@@ -9,23 +9,23 @@ public class CriaIndiceOrdenado {
 	{
 		String linha = "";
 		String colunas[];
-        long posicao;				
+        	long posicao;				
 		RandomAccessFile f = new RandomAccessFile("bolsa.csv", "rw");
 		RandomAccessFile fi = new RandomAccessFile("bolsa_ordenado.ind", "rw");
 		ArrayList<ElementoIndice> a = new ArrayList<ElementoIndice>(14000000);
-        linha = f.readLine();
-        while(f.getFilePointer() < f.length())
-        {
-            posicao = f.getFilePointer();
-            linha = f.readLine();
-            colunas = linha.split("\t");
-            ElementoIndice e = new ElementoIndice(colunas[7], posicao);
+        	linha = f.readLine();
+        	while(f.getFilePointer() < f.length())
+        	{
+            		posicao = f.getFilePointer();
+            		linha = f.readLine();
+            		colunas = linha.split("\t");
+            		ElementoIndice e = new ElementoIndice(colunas[7], posicao);
 			a.add(e);
-        }
+        	}
 		System.out.println("Lido = OK");
 		Collections.sort(a, new ComparaIndice());
 		System.out.println("Ordenado = OK");
-        for(ElementoIndice e2: a)
+        	for(ElementoIndice e2: a)
 		{
 			e2.escreve(fi);
 		}
